@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Chat Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>Active Users</h2>
+<ul id="users"></ul>
+
+<div class="dashboard">
+
+<h3>Live Dashboard</h3>
+
+<p>Room : <span id="roomName">Chat Room</span></p>
+
+<p>Active Users : <span id="activeUsers">0</span></p>
+
+<p>Total Messages : <span id="totalMessages">0</span></p>
+
+<p>Status : <span id="connectionStatus">Connected</span></p>
+
+</div>
+
+</div>
+
+<!-- Chat Main -->
+
+<div class="chat-main">
+
+<!-- WhatsApp Style Header -->
+
+<div class="chat-header">
+
+<div class="chat-user">
+
+<div class="avatar">👤</div>
+
+<div>
+<h3 id="roomTitle">Chat Room</h3>
+<p id="onlineStatus">Online</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Messages -->
+
+<div id="messages" class="messages"></div>
+
+<p id="typing"></p>
+
+<!-- Chat Form -->
+
+<form id="chat-form">
+
+<input
+id="msg"
+placeholder="Type message..."
+autocomplete="off"
+required
+>
+
+<button type="submit">Send</button>
+
+</form>
+
+<!-- Emoji Panel -->
+
+<div class="emoji-panel">
+
+<button type="button" onclick="addEmoji('😀')">😀</button>
+<button type="button" onclick="addEmoji('😂')">😂</button>
+<button type="button" onclick="addEmoji('😍')">😍</button>
+<button type="button" onclick="addEmoji('👍')">👍</button>
+<button type="button" onclick="addEmoji('🔥')">🔥</button>
+<button type="button" onclick="addEmoji('🎉')">🎉</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
